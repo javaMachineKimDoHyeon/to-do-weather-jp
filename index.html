@@ -1,1 +1,52 @@
-.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TO-DO WEATHER</title>
+
+  <!-- flatpickr CSS (감성 테마 적용: airbnb) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css" />
+  <!-- flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- 손글씨 느낌 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📖 TO-DO WEATHER</h1>
+    <div class="card">
+      <label for="date-picker">📅 日付を選択: </label>
+      <input type="text" id="date-picker" placeholder="날짜를 선택해 주세요" />
+    </div>
+    <p style="text-align: center;">📍 選択した日付: <strong id="selected-date-display">日を選びください</strong></p>
+    <div class="card flex-group">
+      <div class="weather" id="weather-box">
+        <h2>☁️ 天気情報</h2>
+        <p>天気予報を取得中…</p>
+      </div>
+      <div class="todo">
+        <h2>📝 今日のやること</h2>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+    <div class="card">
+      <h2>+ 新しいタスクを追加</h2>
+      <input type="text" id="todo-input" placeholder="タスクを入力してください" />
+      <button id="add-btn">登録</button>
+    </div>
+  </div>
+  <div id="sidebar" class="sidebar">
+    <h3>📝 タスクの編集</h3>
+    <input type="text" id="edit-input" />
+    <div style="margin-top: 10px;">
+      <button id="edit-confirm">編集</button>
+      <button id="edit-delete">削除</button>
+    </div>
+  </div>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
