@@ -1,7 +1,7 @@
 // weather.js
 
 // OpenWeatherMap API 키 (개인 발급 받은 값)
-const API_KEY = '75486a58af102f1fb237ea3b5ad2ffa4';
+const API_KEY = 'sss';
 // 날씨 정보를 가져올 도시 이름 (현재는 고정값 'Busan')
 const CITY = 'Kanagawa';
 
